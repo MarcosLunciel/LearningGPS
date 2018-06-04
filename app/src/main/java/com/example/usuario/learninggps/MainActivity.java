@@ -1,6 +1,10 @@
 package com.example.usuario.learninggps;
 
 import android.Manifest;
+<<<<<<< HEAD
+import android.annotation.SuppressLint;
+=======
+>>>>>>> 5ff1483e485c840bf974e892d41628e8957c95a6
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -59,11 +63,27 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_FINE_LOCATION);
 
+<<<<<<< HEAD
+                // MY_PERMISSIONS_REQUEST_FINE_LOCATION is an
+=======
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+>>>>>>> 5ff1483e485c840bf974e892d41628e8957c95a6
                 // app-defined int constant. The callback method gets the
                 // result of the request.
             }
         }
+<<<<<<< HEAD
+//        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+//        provider = locationManager.getProvider(LocationManager.GPS_PROVIDER);
+//        Criteria criteria = new Criteria();
+//        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+//        criteria.setCostAllowed(false);
+//
+//        String providerName = locationManager.getBestProvider(criteria, true);
+//        locationManager.requestLocationUpdates(providerName,1000,0,this);
+//        Location mylocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//        text1.setText(String.valueOf(mylocation.getLongitude()));
+=======
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         provider = locationManager.getProvider(LocationManager.GPS_PROVIDER);
         Criteria criteria = new Criteria();
@@ -74,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         locationManager.requestLocationUpdates(providerName,1000,0,this);
         Location mylocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         text1.setText(String.valueOf(mylocation.getLongitude()));
+>>>>>>> 5ff1483e485c840bf974e892d41628e8957c95a6
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapView);
@@ -83,6 +104,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
 
 
 
+<<<<<<< HEAD
+    @SuppressLint("MissingPermission")
+=======
+>>>>>>> 5ff1483e485c840bf974e892d41628e8957c95a6
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -102,6 +127,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
 
                     String providerName = locationManager.getBestProvider(criteria, true);
 
+<<<<<<< HEAD
+                    locationManager.requestLocationUpdates(providerName,1000,0,this);
+                    Location mylocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                    text1.setText(String.valueOf(mylocation.getLongitude()));
+=======
+>>>>>>> 5ff1483e485c840bf974e892d41628e8957c95a6
 
                     // If no suitable provider is found, null is returned.
                     if (providerName != null) {
